@@ -1,5 +1,3 @@
-Here’s a cleaned and professional version of your markdown for the project:
-
 # Windows MDM CSP Command Extractor
 
 A Python script to automatically fetch and parse Microsoft’s latest Windows MDM Configuration Service Provider (CSP) DDF files, extracting all available executable commands (`AccessType: Exec`).  
@@ -10,7 +8,7 @@ The output is a structured JSON file listing each command’s OMA_URI, descripti
 ## Why This Project?
 
 Microsoft does not publish a clear, consolidated list of Windows MDM commands. These commands are hidden within individual XML DDF files.  
-This project automates the discovery and listing of all executable Windows MDM actions — helpful for MDM engineers, developers, and documentation writers.
+This project automates the discovery and listing of all executable Windows MDM actions helpful for MDM engineers, developers, and documentation writers.
 
 ---
 
@@ -32,14 +30,9 @@ This project automates the discovery and listing of all executable Windows MDM a
 
 ---
 
-## Usage
+## Example Output
 
-```bash
-python3 csp_command_extractor.py
-
-Example output:
-
-[
+```[
   {
     "OMA_URI": "./Device/Vendor/MSFT/RemoteWipe/doWipe",
     "NodeName": "doWipe",
@@ -54,15 +47,4 @@ Example output:
     "MinimumOS": "10.0.18363",
     "SourceFile": "BitLocker.xml"
   }
-]
-
-
-⸻
-
-Roadmap
-	•	JSON output
-	•	YAML output (planned)
-	•	Optional output filename support
-	•	Filter by CSP or keyword (future)
-
-Let me know if you'd like this styled for a more technical audience (e.g., adding badges, contributing sections, etc.).
+]```
